@@ -1,4 +1,3 @@
-
 #include<iostream>
 using namespace std;
 
@@ -27,6 +26,8 @@ class Matrix{
                val = arr[0][j];
                check(val);
           }
+          if(m==0)
+               cout<<" no match";
      }
 
      void check(int v){
@@ -37,10 +38,8 @@ class Matrix{
                          ++count; 
                          if(count>=s1-1){
                               cout<<v<<" ";
-                         }
-                         else{
-                           cout<<" No common values \n";
-                         }                       
+                              ++m;
+                         }                    
                     }
                }
           }
