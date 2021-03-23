@@ -1,10 +1,4 @@
-/******************************************************************************
 
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 #include<iostream>
 using namespace std;
 
@@ -33,29 +27,6 @@ class Matrix{
                val = arr[0][j];
                check(val);
           }
-          
-          if(m>0){
-               cout<<" Common values in each row : ";
-               for(int i=0;i<m;i++){
-                    for(int j=i+1;j<m;j++){
-                         if(cm[i] == cm[j]){
-                              for(int k=i;k<m;k++){
-                                   cm[k] = cm[k+1];
-                              }
-                              --m;
-                         }
-                    }
-               }
-
-               for(int k=0;k<m;k++){
-                    cout<<cm[k]<<" ";
-                    
-               }
-          }
-
-          else{
-               cout<<"no match \n";
-          }
      }
 
      void check(int v){
@@ -65,9 +36,11 @@ class Matrix{
                     if(v == arr[i][j]){                       
                          ++count; 
                          if(count>=s1-1){
-                              cm[m] = v;
-                              ++m;
+                              cout<<v<<" ";
                          }
+                         else{
+                           cout<<" No common values \n";
+                         }                       
                     }
                }
           }
